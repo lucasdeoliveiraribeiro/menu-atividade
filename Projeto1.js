@@ -1,14 +1,12 @@
 import * as readline from 'readline-sync';
-console.log("\n\n******************************************************************************");
+console.log("_______________________________________________________________________");
 console.log("Curso: Tecnologia em Análise e Desenvolvimento de Sistemas");
 console.log("Disciplina: Programação Front-End");
 console.log("Professor: José Carlos Flores");
-console.log("Turma: ADS3B");
-console.log("******************************************************************************\n");
+console.log("Turma: ADS3B\n");
 console.log("Participantes:");
 console.log("Lucas de Oliveira Ribeiro");
 console.log("Victor Gabriel da Silva");
-'';
 console.log("Gustavo Dell Bianco Tomazelli");
 console.log("Lucas de Oliveira Ribeiro");
 console.log("Lucas de Oliveira Ribeiro");
@@ -59,38 +57,172 @@ function atividade3() {
     console.log("sua media foi: ", MediaNota.toFixed(1)); // Tofixed(1) deixa somente uma casa decimal depois da virgula
 }
 function atividade4() {
+    let valor_Convercao = readline.questionFloat("Informe o valor em Fahrenheit para convercao em Celsiu: ");
+    let convercao = (valor_Convercao - 32) * 5 / 9;
+    console.log(`A convercao de Fahrenheit ${valor_Convercao}, foi ${convercao.toFixed(1)}`);
 }
 ;
 function atividade5() {
+    console.log("Sistema mostrarara somente os numeros pares de 1 ao 20");
+    const valor_Pares = [];
+    for (let i = 1; i <= 20; i++) {
+        if (i % 2 === 0) {
+            valor_Pares.push(i);
+        }
+    }
+    console.log("Numeros pares encontrado: \n");
+    valor_Pares.forEach((numero) => {
+        console.log(`${numero}`);
+    });
 }
 ;
 function atividade6() {
+    let valor_usuario = [];
+    for (let i = 0; i < 5; i++) {
+        let valor = readline.question(`digite o ${i + 1}  nome: `);
+        valor_usuario.push(valor);
+    }
+    console.log(`os nomes armazenados foram: ${valor_usuario}`);
 }
 ;
 function atividade7() {
+    let numeros = [];
+    for (let i = 0; i < 5; i++) {
+        numeros[i] = readline.questionInt(`Digite o ${i + 1}° numero: `);
+    }
+    let maior = numeros[0];
+    for (let i = 1; i < numeros.length; i++) {
+        if (numeros[i] > maior) {
+            maior = numeros[i];
+        }
+    }
+    console.log("\nArray:", numeros);
+    console.log("Maior numero:", maior);
 }
 ;
 function atividade8() {
+    let frase = readline.question("Digite uma palavra ou frase: ");
+    let contador = 0;
+    for (let letra of frase.toLowerCase()) {
+        if (letra == "a" ||
+            letra == "e" ||
+            letra == "i" ||
+            letra == "o" ||
+            letra == "u") {
+            contador++;
+        }
+    }
+    console.log(`Quantidade de vogais: ${contador}`);
 }
 ;
 function atividade9() {
+    console.log("Bem vindo a calculadora simple");
+    let num1 = readline.questionFloat("informe o primeiro numero: ");
+    let operacao = readline.question("escolha qual operacao deseja realizar (+ - x /): ");
+    let num2 = readline.questionFloat("informe o segundo numero ");
+    let resultado;
+    switch (operacao) {
+        case "+":
+            resultado = num1 + num2;
+            console.log(`o valor foi: ${resultado}`);
+            break;
+        case "-":
+            resultado = num1 - num2;
+            console.log(`o valor foi: ${resultado}`);
+            break;
+        case "x":
+            resultado = num1 * num2;
+            console.log(`o valor foi: ${resultado}`);
+            break;
+        case "/":
+            if (num2 === 0) {
+                console.log("Erro: divisao por zero!");
+            }
+            else {
+                resultado = num1 / num2;
+                console.log(`Resultado: ${resultado.toFixed(2)}`);
+            }
+            break;
+        default:
+            console.log("a operacao e invalida");
+    }
 }
 ;
 function atividade10() {
+    let numeros = [];
+    for (let i = 0; i < 5; i++) {
+        numeros[i] = readline.questionInt(`Digite o ${i + 1} numero: `);
+    }
+    numeros.sort((a, b) => a - b);
+    console.log("\nArray em ordem crescente:");
+    console.log(numeros);
 }
 ;
 function atividade11() {
+    class Pessoa {
+        nome;
+        idade;
+        constructor(nome, idade) {
+            this.nome = nome;
+            this.idade = idade;
+        }
+        exibirDados() {
+            console.log("Nome:", this.nome);
+            console.log("Idade:", this.idade);
+        }
+    }
+    let pessoa1 = new Pessoa("Lucas", 20);
+    pessoa1.exibirDados();
 }
 ;
 function atividade12() {
+    class Pessoa {
+        nome;
+        idade;
+        constructor(nome, idade) {
+            this.nome = nome;
+            this.idade = idade;
+        }
+        exibirDados() {
+            console.log("Nome:", this.nome);
+            console.log("Idade:", this.idade);
+        }
+    }
+    class aluno extends Pessoa {
+        matricula;
+        curso;
+        constructor(nome, idade, matricula, curso) {
+            super(nome, idade);
+            this.matricula = matricula;
+            this.curso = curso;
+        }
+        exibirAluno1() {
+            this.exibirDados();
+            console.log("matricula:", this.matricula);
+            console.log("curso: ", this.curso);
+        }
+    }
+    let aluno1 = new aluno("lucas", 20, 218329, "ADS");
+    aluno1.exibirAluno1();
 }
 ;
 function atividade13() {
+    class Carro {
+        acelerar() {
+            console.log("o carro esta acelerando, vrummm");
+        }
+        frear() {
+            console.log("o carro esta freando, vrum");
+        }
+    }
+    let carro1 = new Carro();
+    carro1.acelerar();
+    carro1.frear();
 }
 ;
 function atividade14() {
     let ValorTabuada = readline.questionInt("Informe um numero para aparecer a tabuada desse numero: ");
-    console.log(`\n Tabuada do ${ValorTabuada}`);
+    console.log(`\nTabuada do ${ValorTabuada}`);
     for (let i = 1; i <= 10; i++) {
         console.log(`${ValorTabuada} x ${i} = ${ValorTabuada * i}`);
     }
@@ -154,9 +286,33 @@ function atividade16() {
 }
 ;
 function atividade17() {
+    let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    let tentativa = 0;
+    while (tentativa !== numeroSecreto) {
+        tentativa = readline.questionInt("Digite um numero entre 1 e 100: ");
+        if (tentativa > numeroSecreto) {
+            console.log("O numero secreto e MENOR!");
+        }
+        else if (tentativa < numeroSecreto) {
+            console.log("O numero secreto e MAIOR!");
+        }
+        else {
+            console.log("\nPARABENS! Voce acertou!");
+            console.log(`Numero secreto: ${numeroSecreto}`);
+        }
+    }
 }
 ;
 function atividade18() {
+    let frase = readline.question("informe a frase para contar os as palavras: ");
+    let palavras = frase.trim().split(" ");
+    let contador = 0;
+    for (let palavra of palavras) {
+        if (palavra !== "") {
+            contador++;
+        }
+    }
+    console.log(`a quantidades de caracter na palavra e ${contador}`);
 }
 ;
 switch (opcao) {
