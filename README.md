@@ -185,7 +185,3 @@ Pressione [ENTER] para voltar ao menu...
 | **Saída** | `dist/` |
 
 ---
-
-## 📅 Data de Entrega
-
-**23 de Maio de 2026**
