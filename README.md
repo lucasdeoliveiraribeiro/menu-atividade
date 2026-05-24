@@ -21,7 +21,7 @@
 | RA 25361575-2 | Victor Gabriel da Silva |
 | RA 25361837-2 | Gustavo Dell Bianco Tomazelli |
 | RA 25357943-2 | Emanoel Aparecido Ferreira da Cruz |
-| RA 25362298-2 | Leonardo Mozzarde |
+| RA 25362298-2 | Leonardo Mozart |
 
 ---
 
