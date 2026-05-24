@@ -4,7 +4,7 @@
 
 ## 🏫 Informações Acadêmicas
 
-| Campo | Kauaby |
+| Campo | Informações |
 |-------|------------|
 | **Curso** | Tecnologia em Análise e Desenvolvimento de Sistemas |
 | **Disciplina** | Programação Front-End |
