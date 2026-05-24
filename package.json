@@ -1,8 +1,19 @@
 {
+  "name": "projeto1-ads",
+  "version": "1.0.0",
+  "description": "Menu de atividades TypeScript - ADS3B",
+  "main": "dist/Projeto1.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/Projeto1.js",
+    "dev": "tsc && node dist/Projeto1.js"
+  },
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@types/readline-sync": "^1.4.8"
+    "@types/node": "^20.0.0",
+    "@types/readline-sync": "^1.4.8",
+    "typescript": "^5.0.0"
   }
 }
