@@ -22,6 +22,8 @@
 | RA 25361837-2 | Gustavo Dell Bianco Tomazelli |
 | RA 25357943-2 | Emanoel Aparecido Ferreira da Cruz |
 | RA 25362298-2 | Leonardo Mozart |
+| RA 25178071-2 | Enzo Gabriel Poersch |
+| RA 25177930-3 | Gabriel Pereira Simões |
 
 ---
 
@@ -185,3 +187,7 @@ Pressione [ENTER] para voltar ao menu...
 | **Saída** | `dist/` |
 
 ---
+
+## 📅 Data de Entrega
+
+**23 de Maio de 2026**
