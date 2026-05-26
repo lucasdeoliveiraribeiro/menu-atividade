@@ -5,8 +5,8 @@
   "main": "dist/Projeto1.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/Projeto1.js",
-    "dev": "tsc && node dist/Projeto1.js"
+    "start": "node src/Projeto1.ts",
+    "dev": "tsc && node src/Projeto1.ts"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
